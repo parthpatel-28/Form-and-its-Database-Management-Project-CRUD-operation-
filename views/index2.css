@@ -1,0 +1,41 @@
+
+.main{
+      
+    background-color: #0d6efd; 
+    height: 600px;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+align-items: center;
+
+}
+
+h1{
+color: aliceblue;
+
+}
+
+
+div.table{
+ margin-left: 25% ;
+    
+    text-align: left;
+}
+
+table{
+    
+    width: 600px;
+    text-align: center;
+
+    
+    
+}
+
+table,tr,th,td{
+    border: 2px solid black ;
+}
+
+th,td{
+    padding: auto;
+}

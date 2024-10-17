@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index2.css"/>
+<style>
+    .main{
+      
+      background-color: #0d6efd; 
+      height: 600px;
+      width: 100%;
+      align-content: center;
+      display: flex;
+      justify-content: center;
+  align-items: center;
+  
+  }
+  
+  .form{
+  display: flex;
+  flex-direction: column;
+      justify-content: center;
+      background-color: aliceblue;
+      width: 40%;
+      height: 70%;
+      justify-content: center;
+      align-items: center;
+   border-radius: 5%; ;   
+  }
+  
+  .table{
+      display: flex;
+      color: #0d6efd;
+      background-color: white;
+      width: 450px;
+      height: 100%;;
+      flex-direction: column;
+      justify-content: center;
+      align-items:self-start;
+      padding-left: 5%;
+      border-radius: 5%;
+      
+      
+  }
+  
+  td{
+      
+      width: 400px;
+      padding-bottom: 0px;
+      margin-top: 50px;
+      align-items: center;
+  }
+  label{
+      font-family:Georgia, 'Times New Roman', Times, serif
+  }
+  
+  .submit{
+      padding-left: 10px;
+  margin-left: 150px;;
+  
+  }
+  
+  .input{
+      width: 370px;
+      border:2px solid gainsboro;
+      border-radius: 3%;
+      background-color: #fafcfc;
+  }
+</style>
+</head>
+<body>
+    
+    <% var i = id;  %>
+    <div class="main" style="background-color: #0d6efd; height: 600px;width: 100%;align-content: center;display: flex;justify-content: center;align-items: center;">
+        
+        
+        
+        <div class="form" style="display: flex;flex-direction: column;justify-content: center;background-color: aliceblue;width: 40%;height: 70%;justify-content: center;align-items: center; border-radius: 5%; ;   ">
+        
+            <h1 style="font-size: large; margin-bottom: 10px; color: #0d6efd;" >Please Edit the Required Details</h1>
+        
+           
+            <form action="/edit_submit/<%=data.rows[i].id %>" method="POST">
+        
+                
+                
+                <table class="table" style="display: flex;color: #0d6efd;background-color: white;width: 450px;height: 100%;;flex-direction: column;justify-content: center;align-items:self-start;padding-left: 5%;border-radius: 5%;">
+                          
+                <tr>
+                    <td><label for = "name" >NAME</label><br>
+                     <input  class="input" type="text" name="name" value="<%= data.rows[i].name %>"><br></td>
+                </tr>
+                
+               
+                
+                <tr>
+                    <td><label for = "email" >EMAIL</label><br>
+                    <input class="input" type="text" name="email" value="<%= data.rows[i].email %>"><br></td>
+                </tr>
+                
+                <tr>
+                    <td><label for = "gender" >GENDER</label><br>
+                        <% if( data.rows[i].gender == "Male" ){ %>
+                    <input type="radio" id="G1"  name="gender" value="Male" checked>
+                        <label> Male</label>
+                        
+        
+                     <input type="radio" id="G1" name="gender" value="Female" >
+                        <label >Female</label><br>
+                    </td>
+                </tr>
+                <% }else{ %>
+                    <input type="radio" id="G1"  name="gender" value="Male" >
+                        <label> Male</label>
+                        
+        
+                     <input type="radio" id="G1" name="gender" value="Female" checked>
+                        <label >Female</label><br>
+                    </td>
+                </tr>
+                <% }; %>     
+                
+                <tr >
+                    
+                    <td ><button class="btn btn-primary" type="submit">Edit</button>
+                    </td>
+                </tr>
+        
+            </table>
+                
+                
+                
+                
+                
+        
+        
+            </form>
+        
+        </div>
+           
+        </div>
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
